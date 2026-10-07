@@ -1,0 +1,6 @@
+@use '../../../dist/ui/theme/theme' as bofa;
+
+@include bofa.bofa-design-system();
+
+html, body { height: 100%; }
+body { margin: 0; background: #f5f7fb; font-family: "Helvetica Neue", Arial, sans-serif; }
