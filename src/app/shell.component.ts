@@ -4,7 +4,7 @@ import { AuthService } from './core/auth/auth.service';
 @Component({
   selector: 'app-root',
   template: `
-    <mat-toolbar color="primary" class="topbar">
+    <mat-toolbar color="primary" class="topbar" fxLayout="row" fxLayoutAlign="start center">
       <mat-icon class="logo">account_balance</mat-icon>
       <span class="brand">Digital Banking</span>
       <span class="spacer"></span>

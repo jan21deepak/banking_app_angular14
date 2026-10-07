@@ -19,7 +19,7 @@
           </mat-select>
         </mat-form-field>
         <bofa-alert-banner level="warning" *ngIf="form.hasError('sameAccount')">Choose two different accounts.</bofa-alert-banner>
-        <div class="row">
+        <div class="row" fxLayout="row" fxLayout.xs="column" fxLayoutGap="16px">
           <mat-form-field appearance="outline">
             <mat-label>Amount</mat-label>
             <span matPrefix>$&nbsp;</span>

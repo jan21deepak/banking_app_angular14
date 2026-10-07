@@ -10,7 +10,7 @@ import { transferValidator } from './transfer.validators';
 @Component({
   selector: 'app-transfer',
   templateUrl: './transfer.component.html',
-  styles: ['.row { display: flex; gap: 16px; } .row > * { flex: 1; } .done { text-align: center; padding: 24px 0; } .done mat-icon { font-size: 48px; height: 48px; width: 48px; color: #1e6b3a; }'],
+  styles: ['.row > * { flex: 1; } .done { text-align: center; padding: 24px 0; } .done mat-icon { font-size: 48px; height: 48px; width: 48px; color: #1e6b3a; }'],
 })
 export class TransferComponent implements OnInit {
   accounts: Account[] = [];
