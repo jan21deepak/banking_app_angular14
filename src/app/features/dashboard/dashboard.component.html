@@ -13,8 +13,8 @@
   </div>
   <ng-template #loading><mat-spinner diameter="36"></mat-spinner></ng-template>
 
-  <div class="widgets" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="16px grid">
-    <mat-card fxFlex="33.33%" fxFlex.lt-md="100%">
+  <div class="widgets" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="16px">
+    <mat-card fxFlex fxFlex.lt-md="100%">
       <mat-card-title>Credit score</mat-card-title>
       <ng-container *ngIf="creditScore$ | async as score; else unavailable">
         <div class="score">{{ score.score }}</div>
@@ -24,12 +24,12 @@
       <ng-template #unavailable><p class="muted">Credit score is temporarily unavailable.</p></ng-template>
     </mat-card>
 
-    <mat-card fxFlex="33.33%" fxFlex.lt-md="100%">
+    <mat-card fxFlex fxFlex.lt-md="100%">
       <mat-card-title>Markets</mat-card-title>
       <fdp-market-ticker [quotes]="market$ | async" data-test="market-ticker"></fdp-market-ticker>
     </mat-card>
 
-    <mat-card fxFlex="33.33%" fxFlex.lt-md="100%">
+    <mat-card fxFlex fxFlex.lt-md="100%">
       <mat-card-title>Linked external accounts</mat-card-title>
       <div class="quote" *ngFor="let x of external$ | async">
         <span>{{ x.institution }} · {{ x.name }} ••{{ x.mask }}</span>
