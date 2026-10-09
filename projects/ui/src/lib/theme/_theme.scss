@@ -1,4 +1,4 @@
-// BofA Digital design system theme, layered on Angular Material 14 (legacy, non-MDC components).
+// BofA Digital design system theme, layered on Angular Material MDC components.
 @use '@angular/material' as mat;
 
 $bofa-navy: (
@@ -20,10 +20,10 @@ $bofa-primary: mat.define-palette($bofa-navy, 500);
 $bofa-accent: mat.define-palette($bofa-red, 500);
 $bofa-warn: mat.define-palette(mat.$red-palette);
 
-$bofa-typography: mat.define-legacy-typography-config(
+$bofa-typography: mat.define-typography-config(
   $font-family: '"Connections", "Helvetica Neue", Arial, sans-serif',
-  $headline: mat.define-typography-level(24px, 32px, 600),
-  $title: mat.define-typography-level(18px, 26px, 600)
+  $headline-5: mat.define-typography-level(24px, 32px, 600),
+  $headline-6: mat.define-typography-level(18px, 26px, 600)
 );
 
 $bofa-theme: mat.define-light-theme((
@@ -40,31 +40,32 @@ $bofa-theme: mat.define-light-theme((
 //  If you don't need the default component typographies but still want the hierarchy styles,
 //  you can delete this line and instead use:
 //    `@include mat.legacy-typography-hierarchy($bofa-typography);`
-@include mat.all-legacy-component-typographies($bofa-typography);
-@include mat.legacy-core();
-  @include mat.all-legacy-component-themes($bofa-theme);
+@include mat.all-component-typographies($bofa-typography);
+@include mat.core();
+  @include mat.all-component-themes($bofa-theme);
 
   // Design-system overrides that reach into Material's internal DOM / class names.
-  .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: #c0cadc;
+  .mat-mdc-form-field.mat-form-field-appearance-outline .mdc-notched-outline > * {
+    border-color: #c0cadc;
   }
-  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: #012169;
+  .mat-mdc-form-field.mat-form-field-appearance-outline.mat-focused .mdc-notched-outline > * {
+    border-color: #012169;
   }
-  .mat-raised-button.mat-primary,
-  .mat-flat-button.mat-primary {
+  .mat-mdc-raised-button.mat-primary,
+  .mat-mdc-unelevated-button.mat-primary {
     border-radius: 24px;
     padding: 0 24px;
     letter-spacing: 0.02em;
   }
-  .mat-card {
+  // MDC cards drop the legacy 16px inner padding; keep the design-system card contract.
+  .mat-mdc-card {
     border-radius: 12px;
+    padding: 16px;
   }
-  .mat-tab-label-active {
+  .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
     color: #012169;
-    opacity: 1;
   }
-  .mat-chip.mat-standard-chip {
+  .mat-mdc-chip.mat-mdc-standard-chip {
     min-height: 26px;
   }
 }
