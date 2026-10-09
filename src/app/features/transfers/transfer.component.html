@@ -2,7 +2,7 @@
   <bofa-page-header eyebrow="Transfers" title="Transfer between your accounts"
     subtitle="Transfers made before 8 p.m. ET are available the same business day."></bofa-page-header>
 
-  <mat-card appearance="outlined" class="form-card">
+  <mat-card class="form-card">
     <ng-container *ngIf="!confirmation; else done">
       <bofa-alert-banner level="error" *ngIf="error">{{ error }}</bofa-alert-banner>
       <form [formGroup]="form" (ngSubmit)="submit()">

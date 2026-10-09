@@ -1,14 +1,14 @@
 <div class="page">
   <bofa-page-header eyebrow="Bill pay" title="Pay your bills" subtitle="Schedule one-time payments to your saved payees."></bofa-page-header>
   <div class="layout">
-    <mat-card appearance="outlined">
+    <mat-card>
       <mat-card-title>Payees</mat-card-title>
       <div class="payee" *ngFor="let p of payees" [class.selected]="p === selected" (click)="choose(p)" data-test="payee">
         <span>{{ p.name }}<br /><small class="muted">{{ p.category }} · {{ p.accountNumber | bofaMask }}</small></span>
         <mat-icon *ngIf="p === selected">check</mat-icon>
       </div>
     </mat-card>
-    <mat-card appearance="outlined">
+    <mat-card>
       <mat-card-title>{{ selected ? 'Pay ' + selected.name : 'Select a payee' }}</mat-card-title>
       <form [formGroup]="form" (ngSubmit)="pay()">
         <mat-form-field appearance="outline" class="full-width">
