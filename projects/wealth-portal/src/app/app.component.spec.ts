@@ -16,7 +16,7 @@ describe('HoldingsComponent (downstream contract with @bofa-demo/ui)', () => {
     fixture.detectChanges();
     const el: HTMLElement = fixture.nativeElement;
     expect(el.querySelector('bofa-page-header')?.textContent).toContain('Portfolio holdings');
-    expect(el.querySelectorAll('tr.mat-row').length).toBe(3);
+    expect(el.querySelectorAll('tr.mat-mdc-row').length).toBe(3);
     expect(el.textContent).toContain(new BofaAmountPipe().transform(fixture.componentInstance.total));
   });
 });
