@@ -57,8 +57,10 @@ $bofa-theme: mat.define-light-theme((
     padding: 0 24px;
     letter-spacing: 0.02em;
   }
+  // MDC cards drop the legacy 16px inner padding; keep the design-system card contract.
   .mat-mdc-card {
     border-radius: 12px;
+    padding: 16px;
   }
   .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
     color: #012169;
