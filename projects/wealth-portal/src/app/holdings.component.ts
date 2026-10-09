@@ -8,8 +8,8 @@ interface Holding {
 }
 
 @Component({
-  selector: 'wp-holdings',
-  template: `
+    selector: 'wp-holdings',
+    template: `
     <bofa-page-header eyebrow="Merrill Edge (demo)" title="Portfolio holdings" subtitle="Self-directed brokerage"></bofa-page-header>
     <bofa-alert-banner level="info">Market data delayed 15 minutes.</bofa-alert-banner>
     <div class="tiles">
@@ -32,7 +32,8 @@ interface Holding {
       <tr mat-row *matRowDef="let row; columns: columns"></tr>
     </table>
   `,
-  styles: ['.tiles { max-width: 320px; margin-bottom: 24px; } table { width: 100%; }'],
+    styles: ['.tiles { max-width: 320px; margin-bottom: 24px; } table { width: 100%; }'],
+    standalone: false
 })
 export class HoldingsComponent {
   readonly columns = ['symbol', 'name', 'value'];
