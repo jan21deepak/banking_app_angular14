@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { BofaAmountPipe, BofaUiModule } from '@bofa-demo/ui';
 import { HoldingsComponent } from './holdings.component';
-import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
+import { MatTableModule } from '@angular/material/table';
 
 describe('HoldingsComponent (downstream contract with @bofa-demo/ui)', () => {
   beforeEach(async () => {
