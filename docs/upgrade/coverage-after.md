@@ -36,3 +36,14 @@ Raw counts changed even though no tests changed: both the covered and the total 
 code Angular 18 compiles, not the source as written. The ES2022 target (hop 15) and the newer
 compiler output produce slightly different statement and function counts for the same source. The
 small percentage gains come from that counting change. They do not mean more code is tested.
+
+## Re-check at the final target (Angular 21.2, G7 b)
+
+Same commands on `upgrade/angular-21`. The numbers are identical to Angular 18 for all four projects, so the diff vs baseline above still holds. **No project dropped.**
+
+| Project | Statements | Branches | Functions | Lines |
+|---|---:|---:|---:|---:|
+| `ui` | 100% (18/18) | 93.33% (14/15) | 100% (3/3) | 100% (16/16) |
+| `analytics-sdk` | 82.14% (23/28) | 70% (7/10) | 70% (7/10) | 85.18% (23/27) |
+| `digital-banking` | 43.28% (29/67) | 46.87% (15/32) | 32.14% (9/28) | 43.33% (26/60) |
+| `wealth-portal` | 100% (7/7) | 100% (0/0) | 100% (3/3) | 100% (5/5) |
