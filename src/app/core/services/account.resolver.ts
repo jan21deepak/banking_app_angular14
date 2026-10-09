@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Account } from '../models';
 import { AccountsService } from './accounts.service';
 
 @Injectable({ providedIn: 'root' })
-export class AccountResolver implements Resolve<Account> {
+export class AccountResolver  {
   constructor(private accounts: AccountsService) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<Account> {

@@ -1,4 +1,9 @@
-.widgets { margin-top: 24px; }
+.widgets { margin-top: 24px; display: flex; flex-flow: row wrap; gap: 16px; }
+.widgets > mat-card { flex: 1 1 0%; box-sizing: border-box; }
+@media (max-width: 959.98px) {
+  .widgets { flex-direction: column; }
+  .widgets > mat-card { flex: 1 1 100%; max-width: 100%; }
+}
 .score { font-size: 44px; font-weight: 700; color: #012169; margin: 8px 0; }
 .quote { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #eef1f6; }
 .small { font-size: 12px; margin-top: 12px; }

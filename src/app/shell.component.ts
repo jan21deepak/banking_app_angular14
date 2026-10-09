@@ -4,7 +4,7 @@ import { AuthService } from './core/auth/auth.service';
 @Component({
   selector: 'app-root',
   template: `
-    <mat-toolbar color="primary" class="topbar" fxLayout="row" fxLayoutAlign="start center">
+    <mat-toolbar color="primary" class="topbar">
       <mat-icon class="logo">account_balance</mat-icon>
       <span class="brand">Digital Banking</span>
       <span class="spacer"></span>
@@ -29,7 +29,7 @@ import { AuthService } from './core/auth/auth.service';
     </mat-sidenav-container>
   `,
   styles: [`
-    .topbar { position: sticky; top: 0; z-index: 2; }
+    .topbar { position: sticky; top: 0; z-index: 2; display: flex; flex-direction: row; align-items: center; }
     .logo { margin-right: 8px; }
     .brand { font-weight: 600; letter-spacing: .02em; }
     .spacer { flex: 1; }
