@@ -7,7 +7,7 @@ import { AuthService } from '../../core/auth/auth.service';
   selector: 'app-mfa',
   template: `
     <div class="page auth">
-      <mat-card class="form-card">
+      <mat-card appearance="outlined" class="form-card">
         <bofa-page-header eyebrow="Step-up verification" title="Enter your one-time code"
           [subtitle]="'We sent a 6-digit code to ' + (auth.pendingChallenge?.maskedDestination || 'your device')"></bofa-page-header>
         <bofa-alert-banner level="error" *ngIf="error">{{ error }}</bofa-alert-banner>

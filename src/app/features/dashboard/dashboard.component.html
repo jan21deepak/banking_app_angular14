@@ -14,22 +14,22 @@
   <ng-template #loading><mat-spinner diameter="36"></mat-spinner></ng-template>
 
   <div class="widgets">
-    <mat-card>
+    <mat-card appearance="outlined">
       <mat-card-title>Credit score</mat-card-title>
       <ng-container *ngIf="creditScore$ | async as score; else unavailable">
         <div class="score">{{ score.score }}</div>
-        <mat-chip-list><mat-chip selected color="primary">{{ score.band }}</mat-chip></mat-chip-list>
+        <mat-chip-listbox><mat-chip-option selected color="primary">{{ score.band }}</mat-chip-option></mat-chip-listbox>
         <p class="muted small">{{ score.provider }} · as of {{ score.asOf | date: 'mediumDate' }}</p>
       </ng-container>
       <ng-template #unavailable><p class="muted">Credit score is temporarily unavailable.</p></ng-template>
     </mat-card>
 
-    <mat-card>
+    <mat-card appearance="outlined">
       <mat-card-title>Markets</mat-card-title>
       <fdp-market-ticker [quotes]="market$ | async" data-test="market-ticker"></fdp-market-ticker>
     </mat-card>
 
-    <mat-card>
+    <mat-card appearance="outlined">
       <mat-card-title>Linked external accounts</mat-card-title>
       <div class="quote" *ngFor="let x of external$ | async">
         <span>{{ x.institution }} · {{ x.name }} ••{{ x.mask }}</span>

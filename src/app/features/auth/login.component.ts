@@ -8,7 +8,7 @@ import { DEMO_CREDENTIALS } from '../../core/mock/mock-backend.interceptor';
   selector: 'app-login',
   template: `
     <div class="page auth">
-      <mat-card class="form-card">
+      <mat-card appearance="outlined" class="form-card">
         <bofa-page-header eyebrow="Enterprise SSO" title="Sign in to Online Banking"></bofa-page-header>
         <bofa-alert-banner level="error" *ngIf="error">{{ error }}</bofa-alert-banner>
         <form [formGroup]="form" (ngSubmit)="submit()">
