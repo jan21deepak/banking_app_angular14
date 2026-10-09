@@ -5,8 +5,8 @@ import { AuthService } from '../../core/auth/auth.service';
 import { DEMO_CREDENTIALS } from '../../core/mock/mock-backend.interceptor';
 
 @Component({
-  selector: 'app-login',
-  template: `
+    selector: 'app-login',
+    template: `
     <div class="page auth">
       <mat-card class="form-card">
         <bofa-page-header eyebrow="Enterprise SSO" title="Sign in to Online Banking"></bofa-page-header>
@@ -30,7 +30,8 @@ import { DEMO_CREDENTIALS } from '../../core/mock/mock-backend.interceptor';
       </mat-card>
     </div>
   `,
-  styles: ['.auth { display: flex; justify-content: center; padding-top: 64px; } .hint { margin-top: 16px; font-size: 13px; }'],
+    styles: ['.auth { display: flex; justify-content: center; padding-top: 64px; } .hint { margin-top: 16px; font-size: 13px; }'],
+    standalone: false
 })
 export class LoginComponent {
   readonly demo = DEMO_CREDENTIALS;

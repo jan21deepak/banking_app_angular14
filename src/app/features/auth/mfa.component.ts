@@ -4,8 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../core/auth/auth.service';
 
 @Component({
-  selector: 'app-mfa',
-  template: `
+    selector: 'app-mfa',
+    template: `
     <div class="page auth">
       <mat-card class="form-card">
         <bofa-page-header eyebrow="Step-up verification" title="Enter your one-time code"
@@ -23,7 +23,8 @@ import { AuthService } from '../../core/auth/auth.service';
       </mat-card>
     </div>
   `,
-  styles: ['.auth { display: flex; justify-content: center; padding-top: 64px; } .hint { margin-top: 16px; font-size: 13px; }'],
+    styles: ['.auth { display: flex; justify-content: center; padding-top: 64px; } .hint { margin-top: 16px; font-size: 13px; }'],
+    standalone: false
 })
 export class MfaComponent {
   code = new FormControl('', [Validators.required, Validators.pattern(/^\d{6}$/)]);

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { AuthService } from './core/auth/auth.service';
 
 @Component({
-  selector: 'app-root',
-  template: `
+    selector: 'app-root',
+    template: `
     <mat-toolbar color="primary" class="topbar">
       <mat-icon class="logo">account_balance</mat-icon>
       <span class="brand">Digital Banking</span>
@@ -28,7 +28,7 @@ import { AuthService } from './core/auth/auth.service';
       <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
     </mat-sidenav-container>
   `,
-  styles: [`
+    styles: [`
     .topbar { position: sticky; top: 0; z-index: 2; display: flex; flex-direction: row; align-items: center; }
     .logo { margin-right: 8px; }
     .brand { font-weight: 600; letter-spacing: .02em; }
@@ -37,6 +37,7 @@ import { AuthService } from './core/auth/auth.service';
     .nav { width: 240px; border-right: 1px solid #e3e7ef; }
     .active { background: #e6eaf1; color: #012169; font-weight: 600; }
   `],
+    standalone: false
 })
 export class ShellComponent {
   constructor(public auth: AuthService) {}
