@@ -23,6 +23,5 @@ const DECLARATIONS = [
   declarations: DECLARATIONS,
   imports: [CommonModule, MatButtonModule, MatCardModule, MatIconModule],
   exports: DECLARATIONS,
-  entryComponents: [BofaToastComponent],
 })
 export class BofaUiModule {}
