@@ -3,9 +3,9 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 export type BofaAccountKind = 'checking' | 'savings' | 'credit' | 'investment';
 
 @Component({
-  selector: 'bofa-account-tile',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'bofa-account-tile',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <mat-card class="bofa-account-tile" [class.credit]="kind === 'credit'" (click)="select.emit()">
       <div class="row">
         <mat-icon class="kind-icon">{{ icon }}</mat-icon>
@@ -18,7 +18,7 @@ export type BofaAccountKind = 'checking' | 'savings' | 'credit' | 'investment';
       <div class="label">{{ kind === 'credit' ? 'Current balance' : 'Available balance' }}</div>
     </mat-card>
   `,
-  styles: [`
+    styles: [`
     .bofa-account-tile { cursor: pointer; transition: box-shadow .15s ease; }
     .bofa-account-tile:hover { box-shadow: 0 6px 18px rgba(1, 33, 105, .18); }
     .row { display: flex; gap: 12px; align-items: center; }
@@ -28,7 +28,8 @@ export type BofaAccountKind = 'checking' | 'savings' | 'credit' | 'investment';
     .balance { font-size: 26px; font-weight: 600; margin-top: 16px; color: #012169; }
     .credit .balance { color: #e31837; }
     .label { color: #5a6275; font-size: 12px; }
-  `]
+  `],
+    standalone: false
 })
 export class BofaAccountTileComponent {
   @Input() name = '';
