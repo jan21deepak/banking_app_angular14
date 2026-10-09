@@ -46,7 +46,7 @@
   },
   "description": "Customer-facing digital banking web app (Angular 14) with a shared design-system library and downstream consumers.",
   "engines": {
-    "node": ">=14.20 <17"
+    "node": "^14.20.0 || ^16.13.0"
   },
   "overrides": {
     "@fdp/market-widget": {
