@@ -3,9 +3,9 @@
   "version": "2.7.1",
   "description": "Proprietary Digital Banking analytics SDK (page views, interaction tracking, API latency beacons).",
   "peerDependencies": {
-    "@angular/common": "^19.2.0",
-    "@angular/core": "^19.2.0",
-    "@angular/router": "^19.2.0"
+    "@angular/common": "^20.3.0",
+    "@angular/core": "^20.3.0",
+    "@angular/router": "^20.3.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
