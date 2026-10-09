@@ -8,6 +8,6 @@
 .quote { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #eef1f6; }
 .small { font-size: 12px; margin-top: 12px; }
 ::ng-deep .mat-mdc-chip.mat-mdc-standard-chip.mat-mdc-chip-selected.mat-primary {
-  --mdc-chip-elevated-container-color: #1e6b3a;
-  --mdc-chip-elevated-selected-container-color: #1e6b3a;
+  --mat-chip-elevated-container-color: #1e6b3a;
+  --mat-chip-elevated-selected-container-color: #1e6b3a;
 }
