@@ -1,4 +1,4 @@
-// BofA Digital design system theme, layered on Angular Material 14 (legacy, non-MDC components).
+// BofA Digital design system theme, layered on Angular Material MDC components.
 @use '@angular/material' as mat;
 
 $bofa-navy: (
@@ -45,13 +45,11 @@ $bofa-theme: mat.define-light-theme((
   @include mat.all-component-themes($bofa-theme);
 
   // Design-system overrides that reach into Material's internal DOM / class names.
-  /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version.*/
-  .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: #c0cadc;
+  .mat-mdc-form-field.mat-form-field-appearance-outline .mdc-notched-outline > * {
+    border-color: #c0cadc;
   }
-  /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version.*/
-  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: #012169;
+  .mat-mdc-form-field.mat-form-field-appearance-outline.mat-focused .mdc-notched-outline > * {
+    border-color: #012169;
   }
   .mat-mdc-raised-button.mat-primary,
   .mat-mdc-unelevated-button.mat-primary {
@@ -62,10 +60,8 @@ $bofa-theme: mat.define-light-theme((
   .mat-mdc-card {
     border-radius: 12px;
   }
-  /* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version.*/
-  .mat-tab-label-active {
+  .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
     color: #012169;
-    opacity: 1;
   }
   .mat-mdc-chip.mat-mdc-standard-chip {
     min-height: 26px;

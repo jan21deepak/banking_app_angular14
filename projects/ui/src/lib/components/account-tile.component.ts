@@ -6,7 +6,7 @@ export type BofaAccountKind = 'checking' | 'savings' | 'credit' | 'investment';
   selector: 'bofa-account-tile',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <mat-card class="bofa-account-tile" [class.credit]="kind === 'credit'" (click)="select.emit()">
+    <mat-card appearance="outlined" class="bofa-account-tile" [class.credit]="kind === 'credit'" (click)="select.emit()">
       <div class="row">
         <mat-icon class="kind-icon">{{ icon }}</mat-icon>
         <div class="meta">
