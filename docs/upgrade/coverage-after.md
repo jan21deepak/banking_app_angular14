@@ -31,6 +31,8 @@ Percentage points, after minus baseline.
 change across the upgrade is the wealth-portal row selector (`tr.mat-row` → `tr.mat-mdc-row`, hop 17),
 which keeps the same 3-row assertion.
 
-The small gains come from the denominator, not new tests: the removed `relativeLinkResolution`
-option (hop 15) and the dropped `entryComponents` (hop 16) took uncovered statements out of the
-instrumented code. The covered counts are unchanged.
+Raw counts changed even though no tests changed: both the covered and the total counts went up
+(for example `ui` statements 15/15 → 18/18, `analytics-sdk` 22/27 → 23/28). Istanbul instruments the
+code Angular 18 compiles, not the source as written. The ES2022 target (hop 15) and the newer
+compiler output produce slightly different statement and function counts for the same source. The
+small percentage gains come from that counting change. They do not mean more code is tested.
